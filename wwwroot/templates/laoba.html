@@ -1,0 +1,59 @@
+<div class="container" ng-app="laobaApp" ng-controller="laobaCtrl">
+    <h1>唠吧社区</h1>
+    <button id="laoba"  class="btn btn-success form-control col-sm-8" >我有话说</button>
+     <div  style="display: none" id="content">
+        <form ng-submit="postForm()" id="laobaForm">
+            <div class="form-group">
+                <input type="text" id="laobaForm" class="form-control" ng-model="formData.title" name="title" placeholder="先想个标题吧..." required>
+            </div>
+            <div class="form-group col-sm-12" style="padding: 0;">
+                <textarea name="diary" ng-model="formData.diary" class="form-control " rows="10" placeholder="#说点什么吧...#" required></textarea>
+            </div>
+            <div class="form-group col-sm-10" style="padding: 0;">
+                <button type="submit" class="btn btn-success form-control">发表</button>
+            </div> 
+            <div class="form-group col-sm-offset-1 col-sm-1" style="padding: 0;">
+                <span class="btn btn-success form-control" id="shouqi">收起</span>
+            </div>          
+        </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <h4>看看大家都在说什么...</h4>
+    <hr>
+    <!-- 这里显示所有的日记 -->
+    <div class="media" ng-repeat="diary in data">
+        <div class="media-left">
+            <a href="#/{{diary.name}}/{{diary.title}}/{{diary.time.second}}">
+                <div style="background-image: url('../uploads/default.png')">
+                    <div style="height: 64px; width: 64px; background-image: url('../uploads/{{diary.name}}.png'); background-size: 100% 100%;"></div>                    
+                </div>
+            </a>
+        </div>
+        <div class="media-body">
+            <a href="#/{{diary.name}}/{{diary.title}}/{{diary.time.second}}"><h4 class="media-heading">{{diary.title}} <small>[作者:{{diary.name}}]</small></h4></a>
+            {{diary.diary}}
+            <hr>
+            <h5>
+                <small>发布日期:{{diary.time.second}}</small>&#x3000;
+                <!--<small>阅读:{{diary.pv}}</small>&#x3000;-->
+                <small>评论:{{diary.comments.length}}</small>
+            </h5>
+        </div>
+        <hr>
+    </div>
+</div>
+
+<script>
+    $('#laoba').click(function(){
+        $('#laoba').css('display','none')
+        $('#content').slideDown(800)
+    })
+    $('#shouqi').click(function(){
+        $('#content').slideUp(800,function(){
+             $('#laoba').css('display','block')
+        })  
+    })
+</script>

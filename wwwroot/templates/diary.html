@@ -1,0 +1,55 @@
+<div class="container" ng-app="diaryApp" ng-controller="diaryCtrl">
+    <div class="media">
+        <div class="media-left">
+            <a href="#">
+                <div style="background-image: url('../uploads/default.png')">
+                    <div style="height: 64px; width: 64px; background-image: url('../uploads/{{data.name}}.png'); background-size: 100% 100%;"></div>                    
+                </div>
+            </a>
+        </div>
+        <div class="media-body" style="width: 100%;">
+            <a href=""><h4 class="media-heading">{{data.title}} <small>[作者:{{data.name}}]</small></h4></a>
+            {{data.diary}}
+            <hr>
+            <h5>
+                <small>发布日期:{{data.time.second}}</small>&#x3000;
+                <!--<small>阅读:{{data.pv}}</small>&#x3000;-->
+                <small><a href="" id="pinglun">评论:{{data.comments.length}}</a></small>
+            </h5>
+
+            <!-- 评论区域 -->
+            <div id="pinglunqu" style="display: none; border: 1px solid #ccc; border-radius: 5px; width: 100%; padding: 10px;">
+                <div ng-repeat="comment in data.comments">
+                    <h5><small>用户</small><a href="#/{{comment.name}}">{{comment.name}}</a><small>说：</small></h5>
+                    <p style="text-indent: 2rem">
+                        {{comment.content}}
+                        <br>
+                        <h6 style="text-indent: 2rem;"> <small>日期: {{comment.time}}</small></h6>
+                    </p>
+                    
+                    <hr>
+                </div>
+                <button class="btn btn-success" id="shou"><span class="glyphicon glyphicon-eject"></span>&nbsp;收起评论</button>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+     <form ng-submit="postForm()">
+        <div class="form-group col-sm-12" style="padding-left: 68px; padding-right: 0;">
+            <textarea name="content" ng-model="formData.content" class="form-control " rows="2" placeholder="#说点什么吧...#" required></textarea>
+        </div>
+        <div class="form-group col-sm-12" style="padding-left: 68px; padding-right: 0;">
+            <button type="submit" class="btn btn-success form-control">发表评论</button>
+        </div>           
+    </form>
+</div>
+
+<script>
+    $('#pinglun').click(function(){
+        $('#pinglunqu').slideToggle(200)
+    })
+    $('#shou').click(function(){
+        $('#pinglunqu').slideUp(200)
+    })
+</script>

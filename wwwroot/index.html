@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
+	<title>一亿优质单身男女的盛宴</title>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		html,body{
+			height: 100%;
+			cursor: url('../images/cursor/xin.png'),auto;
+		}
+		input{
+			cursor: url('../images/cursor/xin.png'),auto;
+		}
+		body{
+			margin: 0;
+			background-color: #f2f2f2;
+		}
+		main table{
+			width: 100%;
+			border-collapse: collapse;
+		}
+		main table td{
+			width: calc(100% / 9);
+			height: 200px;
+			/*background-color:red;*/
+			display:block;	
+			float: left;
+			overflow: hidden;
+			text-align: center;	
+		}
+		main table img:hover{
+			transform: scale(1.2); 
+			opacity: 1;
+		}
+		main table img{
+			opacity: 0.6;
+			transition: all 0.5s; 
+			width: 100%;
+			height: 100%;
+		}
+		header form{
+			float: right;
+		}
+		footer{
+			text-align:center;
+			color: #333;
+			margin: 30px 0;
+		}
+		nav{
+			background-color: pink;
+			padding-top: 10px;
+		}
+		nav p img{
+			vertical-align: middle;
+		}
+		nav p span{
+			font-size: 20px;
+		}
+		aside{
+			border-radius:8px;
+			overflow: hidden;
+			position: fixed;
+			width: 390px;
+			height: 390px;
+			z-index: 999999999;
+			top: calc((100% - 390px) / 2);
+			left: calc((100% - 400px) / 2);
+			box-shadow: 5px 5px 10px black;
+			background-color: white;
+		}
+		aside div.left{
+			float: left;
+			width: 0;
+			height:390px;
+			position: relative;
+		}
+		aside div.right{
+			float: left;
+			width: 390px;
+			height: 390px;
+			background-color: white;
+			padding: 10px;
+		}
+		aside .left span{
+			display: block;
+			padding: 2px;
+			position: absolute;
+			left: 180px;
+			top: 8px;
+			display: none;
+			cursor: pointer;
+			border-radius: 50%;
+			border:3px solid deeppink;
+			animation: run 1s linear infinite;
+		}
+		@keyframes run {
+			0%{
+				transform: scale(1) rotate(0);
+			}
+			50%{
+				transform: scale(1.5) rotate(90deg);
+			}
+			75%{
+				transform: scale(0.5) rotate(180deg);
+			}
+			100%{
+				transform: scale(1) rotate(360deg);
+			}
+		}
+		aside form>div{
+			position: relative;
+		}
+		.glyphicon-ok-sign{
+			position: absolute;
+			right: 10px;
+			top: 34px;
+			color: green;
+		}
+		.glyphicon-remove-sign{
+			color: red;
+		}
+	</style>
+</head>
+<body ng-app="regApp" ng-controller="regCtrl">
+
+	<audio src="./audio/music.mp3" autoplay  loop></audio>
+	<audio src="./audio/dianji.wav" ></audio>
+
+	<nav class="navbar" role="navigation">
+		<div class="container-fluid">
+		    <div class="navbar-header navbar-left">
+		      	<p>
+		        	<img alt="YLSN" src="logo.png" height="50px">
+		        	<span>每个渴望爱的人，都值得被珍惜！</span>
+		      	</p>
+		    </div>
+		    <div class="navbar-header navbar-right">
+		      	<form class="form-inline" role="form" id="loginform">
+					<div class="form-group">
+						<input type="text" name="username" class="form-control" placeholder="账号/手机">
+					</div>
+					<div class="form-group">
+						<input type="password" name="password" class="form-control"  placeholder="密码">
+					</div>
+					<button type="submit" class="btn btn-info">登录</button>
+				</form>
+		    </div>
+		</div>
+	</nav>
+	<main>
+		<table>
+			<tr>
+				<td><img src="images/1.jpg" alt=""></td>
+				<td><img src="images/2.jpg" alt=""></td>
+				<td><img src="images/3.jpg" alt=""></td>
+				<td><img src="images/4.jpg" alt=""></td>
+				<td><img src="images/5.jpg" alt=""></td>
+				<td><img src="images/6.jpg" alt=""></td>
+				<td><img src="images/7.jpg" alt=""></td>
+				<td><img src="images/8.jpg" alt=""></td>
+				<td><img src="images/9.jpg" alt=""></td>
+			</tr>
+			<tr>
+				<td><img src="images/10.jpg" alt=""></td>
+				<td><img src="images/11.jpg" alt=""></td>
+				<td><img src="images/12.jpg" alt=""></td>
+				<td><img src="images/13.jpg" alt=""></td>
+				<td><img src="images/14.jpg" alt=""></td>
+				<td><img src="images/15.jpg" alt=""></td>
+				<td><img src="images/16.jpg" alt=""></td>
+				<td><img src="images/17.jpg" alt=""></td>
+				<td><img src="images/18.jpg" alt=""></td>
+			</tr>
+			<tr>
+				<td><img src="images/19.jpg" alt=""></td>
+				<td><img src="images/20.jpg" alt=""></td>
+				<td><img src="images/21.jpg" alt=""></td>
+				<td><img src="images/22.jpg" alt=""></td>
+				<td><img src="images/23.jpg" alt=""></td>
+				<td><img src="images/24.jpg" alt=""></td>
+				<td><img src="images/25.jpg" alt=""></td>
+				<td><img src="images/26.jpg" alt=""></td>
+				<td><img src="images/27.jpg" alt=""></td>
+			</tr>
+			<tr>
+				<td><img src="images/28.jpg" alt=""></td>
+				<td><img src="images/29.jpg" alt=""></td>
+				<td><img src="images/30.jpg" alt=""></td>
+				<td><img src="images/31.jpg" alt=""></td>
+				<td><img src="images/32.jpg" alt=""></td>
+				<td><img src="images/33.jpg" alt=""></td>
+				<td><img src="images/34.jpg" alt=""></td>
+				<td><img src="images/35.jpg" alt=""></td>
+				<td><img src="images/36.jpg" alt=""></td>
+			</tr>
+		</table>
+	</main>
+	<footer>
+		<span>品牌：11年专业婚恋服务 专业：庞大的资深红娘队伍 真实：诚信会员验证体系</span><br>
+		<span>Copyright &copy; 2005-2016 版权所有：深圳市珍爱网信息技术有限公司</span><br>
+		<span>客服热线：4001-520-520 （周一至周日：9:00-21:00）   不良和违法信息举报专线：4008829288</span>
+	</footer>
+	<aside>
+		<div class="left">
+			<img src="" alt=""  style="display: none; width: 100%;height: 100%">
+			<span class="glyphicon glyphicon-remove"></span>
+		</div>
+		<div class="right">
+			<form  class="form" role="form" name="regform" id="regform">
+				<div class="form-group">
+					<label class="" for="">昵称:</label>
+					<input ng-model="username" name="username" type="text" class="form-control" ng-pattern=" '^[\u4e00-\u9fa5a-zA-Z0-9_]{4,10}$' " placeholder="请输入昵称" required>
+					<span class="glyphicon glyphicon-remove-sign" ng-show="regform.username.$dirty && regform.username.$invalid">请输入4-12位，由数字,字母,下划线,汉字组成的昵称！</span>
+					<span class="glyphicon glyphicon-ok-sign" ng-show="regform.username.$dirty && regform.username.$valid"></span>
+				</div>
+				<div class="form-group">
+					<label for="">性别：</label>
+					<label for=""><input type="radio" name="sex"  value="true">男</label>
+					<label for=""><input type="radio" name="sex"  value="false" checked>女</label>
+				</div>
+				<div class="form-group">
+					<label class="" for="">邮箱:</label>
+					<input type="email" ng-model="email" name="email" class="form-control" id="exampleInputEmail2" placeholder="请输入电子邮箱" required>
+					<span class="glyphicon glyphicon-remove-sign" ng-show="regform.email.$dirty && regform.email.$invalid">请输入正确的邮箱格式！</span>
+					<span class="glyphicon glyphicon-ok-sign" ng-show="regform.email.$dirty && regform.email.$valid"></span>
+				</div>
+				<div class="form-group">
+					<label class="" for="">密码:</label>
+					<input type="password" name="password" ng-model="password" class="form-control" id="exampleInputEmail2" placeholder="请输入密码" required>
+					<span class="glyphicon glyphicon-ok-sign" ng-show="regform.password.$dirty && !regform.password.$empty"></span>
+				</div>
+				<div class="form-group">
+					<label class="" for="">确认密码:</label>
+					<input type="password" name="repassword" ng-model="repassword" class="form-control" id="exampleInputEmail2" placeholder="请再次输入密码">
+					<span class="glyphicon glyphicon-remove-sign" ng-show="regform.repassword.$dirty && password != repassword">两次输入的密码不一致！</span>
+					<span class="glyphicon glyphicon-ok-sign" ng-show="regform.repassword.$dirty && repassword == password"></span>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-success" ng-disabled="regform.username.$dirty && regform.username.$invalid || regform.email.$dirty && regform.email.$invalid || regform.repassword.$dirty && password != repassword">快速注册</button>
+				</div>
+			</form>
+		</div>
+	</aside>
+
+	<script src="./libs/jquery.js"></script>
+	<script src="./libs/angular.js"></script>
+	<script src="./js/reg.js"></script>
+	<script src="./js/login.js"></script>
+	<script>
+		$('main').css('display','none').slideDown(2000);
+		$('aside').css('display','none');
+		setTimeout(function(){
+			$('aside').fadeIn(500)
+		},2000)
+		$('table td img').click(function(e){
+			var src = e.target.src;
+			console.log(src)
+			$('aside img').attr('src',src).show()
+			$('aside .left').animate({"width": 210},300);
+			$('aside').animate({'width':600},300)
+			$('aside .left span').css('display','inline')
+		})
+		$('aside .left span').click(function(){
+			$('aside .left').animate({'width':0},300);
+			$('aside').animate({'width':390},300)
+			$(this).css('display','none')
+		})
+
+		 $('body').mousedown(function(){
+			 $(this).css('cursor',"url('../images/cursor/xinsui.png'),auto")
+			 $('audio').get(1).play()
+		 }).mouseup(function(){
+			 $(this).css('cursor',"url('../images/cursor/xin.png'),auto")
+		 })
+		 $('audio').get(0).volume = 0.05
+		 $('audio').get(1).volume = 0.1
+	</script>
+</body>
+</html>

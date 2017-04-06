@@ -1,0 +1,38 @@
+<div class="container" ng-app="uploadApp" ng-controller="uploadCtrl">
+
+    <h3>上传头像</h3>
+    <hr>
+    <form action="/upload" method="POST" class="form-horizontal" enctype="multipart/form-data" name="form" >
+        <div class="form-group">
+            <div class="col-sm-10">
+                <a href="javascript:;" class="file" >选择文件
+                    <input type="file" ng-model="pic" name="pic" id="" required >
+                </a>
+                <br>
+                <span style="color: red;">*&nbsp;推荐上传正方形图片</span>
+            </div>
+        </div>
+        <div class="form-group" >
+            <div class="col-sm-10"  >
+                <button type="submit" class="btn btn-primary" onclick="sss()">上传</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+function sss(){
+    layui.use(['layer', 'form'], function(){
+            var layer = layui.layer
+            ,form = layui.form();
+            layer.load();
+            //此处演示关闭
+            setTimeout(function(){
+            layer.closeAll('loading');
+            location.reload()
+            location.href = '#/index'
+            
+            }, 1000);  
+    })     
+}
+</script>

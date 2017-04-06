@@ -1,0 +1,174 @@
+body,html{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+#view{
+    min-height: calc(100% - 130px);
+}
+.center{
+    text-align: center;
+}
+footer{
+    background-color: pink;
+    padding: 10px 0;
+}
+
+#nav{
+    background-color: pink;
+    z-index: 999;
+}
+#nav a{
+    outline: none;
+}
+/*修改头像样式*/
+.file {
+    position: relative;
+    display: inline-block;
+    background: #F1F1F1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: black;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.file:hover {
+    box-shadow: 0 0 1px  #ccc;
+    text-decoration: none;
+    color: black;
+}
+
+/*作品展示样式*/
+.zuopin{
+    width: 100%;
+}
+.zuopin section{
+    float: left;
+    width: calc((100% - 20px) / 3);
+    /*height: 200px;*/
+    /*background-color:red;*/
+}
+
+.zuopin section div{
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.zuopin section img{
+    width: 100%;
+    transition: 1s ;
+}
+.zuopin section img:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
+    cursor: pointer;
+}
+.zuopin main{
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+
+/*加入*/
+.join div{
+    width: 50%;
+    float: left;
+    overflow: hidden;
+    
+}
+.join img:hover{
+    transform: scale(1.1) ;
+    transition: 1s;
+}
+.join address p{
+    padding-bottom: 15px ;
+    font-size: 20px;
+}
+.join .button{
+   margin-top: -10px;
+    display: block;
+    width: 90px;
+    height: 40px;
+    border-radius: 7px;
+    background-color:red;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+}
+.join .button:hover{
+    cursor: pointer;
+    animation: shake 0.5s;
+}
+
+/* 查找按钮 */
+.moren{
+    background-image: url('../uploads/default.png');
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+}
+.touxiang{ 
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+}
+.zuozhexinxi{
+    /*display: none;*/
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.zuozhexinxi:hover{
+    color: white;
+    background-color: rgba(30, 30, 30, 0.5);
+    animation: lala 0.5s;
+}
+@keyframes lala{
+    0% {
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(1.2);
+    }
+    75%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+/* 合作 */
+.hezuo table{
+    /*margin: 0 auto;*/
+    border-collapse: separate;
+}
+.hezuo table tr{
+    border: 1px solid red;
+}
+.hezuo table td{
+    height: 66px;
+    width: 206px;
+    margin: 0 10px;
+    border: 1px dotted #ccc;
+    background-size: 100% 100%;
+}

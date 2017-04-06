@@ -1,0 +1,72 @@
+<div class="container" ng-app="detialsApp" ng-controller="detialsCtrl">
+    <h1>作者详情</h1>
+    <hr>
+    <form class="form-horizontal">
+        <div class="form-group" style="position: absolute;">
+            <div>
+                 <div style="background-image: url('../uploads/default.png'); background-size: 100% 100%;">
+                    <div style="height: 100px; width: 100px; background-image: url('../uploads/{{data.name}}.png'); background-size: 100% 100%;"></div>                    
+                </div>
+               <!--<img src="../uploads/{{data.name}}.png" alt="" height="100px;" width="100px;">-->
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name" class="col-sm-2 col-sm-offset-1 control-label">姓名：</label>
+            <div class="col-sm-2">
+                <input type="text" name="name" id="name" class="form-control" pattern="^[\u4e00-\u9fa5]{2,4}$" value="{{data.name}}" readonly>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="age" class="col-sm-2 col-sm-offset-1 control-label">年龄：</label>
+            <div class="col-sm-2">
+                <input type="text" name="age" id="age" class="form-control" pattern="^[1-9][0-9]$" value="{{data.age}}" readonly>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="height" class="col-sm-2 col-sm-offset-1 control-label">身高(cm)：</label>
+            <div class="col-sm-2">
+                <input class="form-control" type="number" max="220" min="140" id="height" name="height" placeholder="请填写身高" value="{{data.height}}" readonly>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="weight" class="col-sm-2 col-sm-offset-1 control-label">体重(kg)：</label>
+            <div class="col-sm-2">
+                <input class="form-control" type="number" min="30" max="150" id="weight" name="weight" placeholder="请填写体重" value="{{data.weight}}" readonly>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="phone" class="col-sm-2 col-sm-offset-1 control-label">手机号：</label>
+            <div class="col-sm-2">
+                <input class="form-control" type="tel" id="phone" name="phone" placeholder="暂无"
+                    required pattern="^[1][3-8]\d{9}$" value="{{data.phone}}" readonly>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email" class="col-sm-2 col-sm-offset-1 control-label">电子邮箱：</label>
+            <div class="col-sm-3">
+                <input class="form-control" type="email" id="email" name="email" placeholder="暂无"
+                    required value="{{data.email}}" readonly>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="age" class="col-sm-2 col-sm-offset-1 control-label">目前薪资(元)：</label>
+            <div class="col-sm-2">
+                <input class="form-control"  required value="{{data.pay}}" placeholder="暂无" readonly>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="text" class="col-sm-2 col-sm-offset-1 control-label">住址：</label>
+            <div class="col-sm-3">
+                <input class="form-control" type="text" id="address" name="address" placeholder="暂无"
+                    required value="{{data.address}}" readonly>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="description" class="col-sm-2 col-sm-offset-1 control-label">自我介绍：</label>
+            <div class="col-sm-7">
+                <textarea class="form-control" id="description" name="description" rows="1"
+                    placeholder="暂无" readonly>{{data.description}}</textarea>
+            </div>
+        </div>
+    </form>
+</div>
